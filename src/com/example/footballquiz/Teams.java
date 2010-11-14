@@ -15,9 +15,8 @@ import android.widget.TextView;
 public class Teams extends Activity {
 	
 	private int index;
-	private int index3;
-	private int index1;
-	private int index2;
+	
+	private int correctImageButtonId;
 	
     
     /** Called when the activity is first created. */
@@ -30,7 +29,7 @@ public class Teams extends Activity {
         final OnClickListener onClickListener = new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if(v.getId() == R.id.ImageButton01){
+				if(correctImageButtonId == v.getId()){
 					Intent intent = new Intent(Teams.this, Level1.class);
 					intent.putExtra("team", DataHolder.teams[index]);
 					startActivity(intent);
@@ -56,9 +55,9 @@ public class Teams extends Activity {
 	private void initImages() {
 		
 		index = (int)(Math.random()*101);
-        index1 = (int)(Math.random()*101);
-        index2 = (int)(Math.random()*101);
-        index3 = (int)(Math.random()*101);
+        int index1 = (int)(Math.random()*101);
+        int index2 = (int)(Math.random()*101);
+        int index3 = (int)(Math.random()*101);
     
         while(index == index1){
         	index1 = (int)(Math.random()*101);
@@ -88,12 +87,23 @@ public class Teams extends Activity {
         ImageView imageView2 = (ImageView) findViewById(R.id.ImageButton04);
         
         // get a random list of image id's
-        final Integer[] randomInts = getRandomOrderedArray(DataHolder.teamImages[index], DataHolder.teamImages[index3], DataHolder.teamImages[index2], DataHolder.teamImages[index1]);
+        final Integer[] randomInts = getRandomOrderedArray(index, index3, index2, index1);
         
-        imageView.setImageResource(randomInts[0]);
-        imageView0.setImageResource(randomInts[1]);
-        imageView1.setImageResource(randomInts[2]);
-        imageView2.setImageResource(randomInts[3]);
+        
+        if(randomInts[0] == index){
+        	correctImageButtonId = R.id.ImageButton01;
+        } else if(randomInts[1] == index){
+        	correctImageButtonId = R.id.ImageButton02;
+        }else if(randomInts[2] == index){
+        	correctImageButtonId = R.id.ImageButton03;
+        } else {
+        	correctImageButtonId = R.id.ImageButton04;
+        }
+        
+        imageView.setImageResource(DataHolder.teamImages[randomInts[0]]);
+        imageView0.setImageResource(DataHolder.teamImages[randomInts[1]]);
+        imageView1.setImageResource(DataHolder.teamImages[randomInts[2]]);
+        imageView2.setImageResource(DataHolder.teamImages[randomInts[3]]);
         
 	}
 
