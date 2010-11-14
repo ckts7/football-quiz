@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.example.footballquiz"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".FootballQuiz"
+                  android:label="@string/app_name">
+                  
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".Newgame" android:label="New Game"/>
+        <activity android:name=".Teams" android:label="Free Mode"/>
+        <activity android:name=".Level1" android:label="Level 1"/>
+        <activity android:name=".Level2" android:label="Level 2"/>
+        <activity android:name=".Level3" android:label="Level 3"/>
+        <activity android:name=".About" android:label="About"/>
+        <activity android:name=".Highscores" android:label="Highscores"/>
+        <activity android:name=".TeamsTime" android:label="Time Mode"/>
+
+    </application>
+    <uses-sdk android:minSdkVersion="7" />
+
+</manifest> 
