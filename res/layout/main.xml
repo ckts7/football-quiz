@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
 
-
-<RelativeLayout android:id="@+id/RelativeLayout01" android:layout_width="fill_parent" 
-android:layout_height="fill_parent" 
-android:background="@drawable/bild2" xmlns:android="http://schemas.android.com/apk/res/android"><ImageButton android:id="@+id/ImageButton01" android:layout_height="50dp" android:layout_width="fill_parent" android:src="@drawable/nwwwwgame" android:background="@null" android:layout_marginTop="100dp"></ImageButton>
-<ImageButton android:layout_width="wrap_content" android:id="@+id/ImageButton02" android:background="@null" android:src="@drawable/highscores" android:layout_height="50dp" android:layout_below="@+id/ImageButton01" android:layout_marginLeft="10dp" android:layout_marginTop="20dp"></ImageButton>
-<ImageButton android:layout_below="@+id/ImageButton02" android:id="@+id/ImageButton03" android:layout_width="fill_parent" android:layout_height="50dp" android:src="@drawable/about" android:background="@null" android:layout_marginTop="20dp"></ImageButton>
-</RelativeLayout>
-
-
-
-
-
+<Button android:text="@string/ofdash" android:id="@+id/Button01" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+</LinearLayout>

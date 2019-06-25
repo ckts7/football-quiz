@@ -1,8 +1,0 @@
-<RelativeLayout android:id="@+id/RelativeLayout01" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
-
-<TextView android:text="@+id/TextView01" android:id="@+id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="25dp" android:textColor="@color/White" android:layout_centerHorizontal="true" android:layout_marginTop="30dp"></TextView>
-<Button android:text="@+id/Button01" android:id="@+id/Button01" android:layout_width="fill_parent" android:layout_height="60dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginTop="185dp"></Button>
-<Button android:text="@+id/Button02" android:layout_below="@+id/Button01" android:id="@+id/Button02" android:layout_width="fill_parent" android:layout_height="60dp" android:layout_marginRight="10dp" android:layout_marginLeft="10dp"></Button>
-<Button android:text="@+id/Button03" android:layout_below="@+id/Button02" android:id="@+id/Button03" android:layout_width="fill_parent" android:layout_height="60dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"></Button>
-<Button android:text="@+id/Button04" android:layout_below="@+id/Button03" android:id="@+id/Button04" android:layout_width="fill_parent" android:layout_height="60dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"></Button>
-</RelativeLayout>
